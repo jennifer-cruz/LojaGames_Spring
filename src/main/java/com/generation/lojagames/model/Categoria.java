@@ -21,8 +21,8 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull(message = "O nome da categoria é obrigatório")
-	private String nomeCategoria;
+	@NotNull(message = "A Classificação é obrigatório")
+	private String classificacao;
 
 	@NotNull(message = "O genero é obrigatório")
 	private String genero;
@@ -33,28 +33,45 @@ public class Categoria {
 private List<Produtos> produtos;
 
 
-	public Long getId() {
-		return id;
-	}
+public Long getId() {
+	return id;
+}
 
-	public List<Produtos> getProdutos() {
-		return produtos;
-	}
 
-	public void setProdutos(List<Produtos> produtos) {
-		this.produtos = produtos;
-	}
+public void setId(Long id) {
+	this.id = id;
+}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
-	public String getNomeCategoria() {
-		return nomeCategoria;
-	}
+public String getClassificacao() {
+	return classificacao;
+}
 
-	public void setNomeCategoria(String nomeCategoria) {
-		this.nomeCategoria = nomeCategoria;
-	}
+
+public void setClassificacao(String classificacao) {
+	this.classificacao = classificacao;
+}
+
+
+public String getGenero() {
+	return genero;
+}
+
+
+public void setGenero(String genero) {
+	this.genero = genero;
+}
+
+
+public List<Produtos> getProdutos() {
+	return produtos;
+}
+
+
+public void setProdutos(List<Produtos> produtos) {
+	this.produtos = produtos;
+}
+
+
 
 }
